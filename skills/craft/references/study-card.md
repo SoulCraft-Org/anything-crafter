@@ -15,7 +15,7 @@ Date: <yyyy-mm-dd>
 <2 sentences, plain words>
 
 ## Licence and reuse
-Licence: <name, or "none found">
+Licence: <every statement found (file, manifest, README), or "none found">
 May reuse: <ideas and patterns, always>
 Never reuse: <its text, art, code, name, brand, unless the licence says yes>
 
@@ -44,3 +44,4 @@ Never reuse: <its text, art, code, name, brand, unless the licence says yes>
 4. A part you could not open goes in Unknowns, never in Parts as Seen.
 5. Keep quotes under 15 words. Never paste the example's text or code.
 6. No licence found: write "none found" and treat it as "ideas only".
+7. Licence statements disagree: list them all and take ideas only.

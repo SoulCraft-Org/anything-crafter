@@ -7,7 +7,7 @@ Write it to `craft/check.md`. A fresh reviewer reads only `craft/` and the resul
 ```
 # Check
 Result checked: <path, link, or "ran it" or "opened it">
-Reviewer: <fresh session>
+Reviewer: <fresh session, or "not fresh" and why>
 
 | Promise | Brief line | Mark | Proof |
 | --- | --- | --- | --- |
@@ -43,4 +43,6 @@ Fix next: <the ❌ rows first, one line each, or "none">
 2. "Looks fine" is not proof.
 3. Never drop a failed or unchecked promise. Show it.
 4. Zero ❌ is fine. Never invent a finding.
-5. STOP 2: show the table. Wait for the person.
+5. No fresh session or subagent to be had? Write `Reviewer: not fresh` and why. Never claim fresh.
+6. "Never copied": compare runs of 6 or more words in the result against the examples. Standard boilerplate (doctype, charset) is fine. Say what you compared.
+7. STOP 2: show the table. Wait for the person.

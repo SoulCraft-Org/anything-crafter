@@ -14,10 +14,10 @@ Studies read: <E1 file, E2 file, ...>
 - <one line>
 
 ## Parts
-| # | Part | From | What it does | Label | Pick |
-| --- | --- | --- | --- | --- | --- |
-| 1 | <part> | E1 | <one line> | Seen | |
-| 2 | <part> | E2 | <one line> | Inferred | |
+| # | Part | From | What it does | Label | Fits vision | Pick |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | <part> | E1 | <one line> | Seen | yes | |
+| 2 | <part> | E2 | <one line> | Inferred | no: <why, for example needs a server> | |
 
 ## Overlaps and gaps
 - Both do: <part both examples have>
@@ -31,8 +31,9 @@ Studies read: <E1 file, E2 file, ...>
 2. Put every part from every card in one table. One row per part.
 3. Merge a part that two examples share into one row. Write both in "From".
 4. Copy each part's label from its card. Never upgrade one.
-5. Leave the Pick column empty.
-6. Where a part serves a V-line in the brief, add the V-number to "What it does".
+5. Fill "Fits vision" with `yes`, or `no` and why when the part costs a V-line (a server, a build step). Never drop the row.
+6. Leave the Pick column empty.
+7. Where a part serves a V-line in the brief, add the V-number to "What it does".
 
 ## Stop 1
 

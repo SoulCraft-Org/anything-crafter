@@ -21,9 +21,18 @@ No mermaid? Use ASCII: [A] -> [B] -> [C]
 | 1 | <piece> | V3 | 3 standard | <one line> |
 | 2 | <piece> | pick 4 | 4 new | <one line> |
 
+## Build
+Folder: <where the build goes>
+
+## Decisions
+| Choice | Pick | Why |
+| --- | --- | --- |
+| <small build choice> | <pick> | <one line> |
+
 ## Originality
 What is mine: <one line, from V4>
 What I learned: <the how, with no names, text, art or code from an example>
+Credit: <reused open-licensed parts go in `NOTICE`. Ideas only: one line of thanks in the README, no `NOTICE`>
 ````
 
 ## Reuse ladder
@@ -44,3 +53,4 @@ Take the first step that works. Write its number in the table.
 3. Learn the how. Never copy the what: no example's text, art, code, name or brand.
 4. The originality line is never empty. Empty means the design is a copy: redo it.
 5. Fewer pieces beat more.
+6. Craft follows the Decisions table. A new choice goes in the table first.
