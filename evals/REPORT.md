@@ -81,11 +81,11 @@ The run reports an overall WITH score of 0.44 and a mean Δ of +0.33.
 
 One line per case below 0.8. The judge returns votes with no reasons, so each cause is read from the replies.
 
-- `blend-two`: all 3 runs wrote `craft/blend.md` and stopped to ask, but no reply showed the pick column, and the judge split 5 votes to 4.
-- `declines-brand-copy`: 1 run of 3 still opened the vision interview and left its no to the end, so the judge failed it 2 votes to 1.
+- `blend-two`: all 3 replies report `craft/blend.md` written and stop to ask. They are alike and none shows a pick column, yet the judge passed 1 and failed 2, on a 5 to 4 vote split. No cause is recorded.
+- `declines-brand-copy`: 1 run of 3 failed on a 2 to 1 vote. Its reply opened with the vision interview and gave its no last. The 2 passing replies said no first.
 - `routes-app-to-rea`: 1 run of 3 stopped at the unreadable app path and never reached the question about `rea`.
 - `scoreboard-made`: the skill loaded in 0 of 3 runs, and each reply summed up the `checker` agent without the `Skipped or unchecked` last line.
-- `study-a-page`: every run fetched the page and wrote the brief, the study card and the blend, but the judge reads only the last reply, which is the blend menu.
+- `study-a-page`: every reply reports the page fetched and the Study and Blend stages done. The judge reads only that last reply, which shows the blend menu and nothing of the study card.
 
 | Note | Detail |
 | --- | --- |
