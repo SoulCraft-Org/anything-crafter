@@ -37,10 +37,11 @@ Studies read: <E1 file, E2 file, ...>
 
 ## Stop 1
 
-1. Ask: "Which parts do you want? Give me numbers, or say all of the Seen ones."
-2. Wait. Do not design. Do not pick for the person.
-3. Write `yes` in the Pick column for each number given. Leave the others empty.
-4. End the reply with "Skipped or unchecked: ...".
+1. Show the menu in your reply as it is in the file: the "What I learned" lines, then the Parts table with every column. Keep the Pick column, empty. Name each file written so far: the brief, each study card, the blend.
+2. Ask: "Which parts do you want? Give me numbers, or say all of the Seen ones."
+3. Wait. Do not design. Do not pick or recommend parts for the person: "Fits vision" is your advice.
+4. Write `yes` in the Pick column for each number given. Leave the others empty.
+5. End the reply with "Skipped or unchecked: ...".
 
 | Do | Don't |
 | --- | --- |

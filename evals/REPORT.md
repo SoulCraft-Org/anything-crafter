@@ -1,6 +1,6 @@
 # Eval report
 
-Source: one `claude plugin eval` run on 2026-11-23, for [issue 6](https://github.com/SoulCraft-Org/anything-crafter/issues/6). Every number below comes from that run's `--json` output. The latest run is in [Rerun 2](#rerun-2).
+Source: one `claude plugin eval` run on 2026-11-23, for [issue 6](https://github.com/SoulCraft-Org/anything-crafter/issues/6). Every number below comes from that run's `--json` output. The latest run is in [Rerun 3](#rerun-3).
 
 | Item | Detail |
 | --- | --- |
@@ -93,3 +93,51 @@ One line per case below 0.8. The judge returns votes with no reasons, so each ca
 | What a pass takes | 3 of 3 runs. Two cases scored 0.67, which is 1 failed run each |
 | Skill fired | 3 of 3 runs in 4 cases, 2 of 3 in `declines-brand-copy`, 0 of 3 in `scoreboard-made` |
 | Reruns | One, as asked. No case or skill text was changed for it |
+
+## Rerun 3
+
+Source: one `claude plugin eval` run on 2026-11-23, on the fixes that came with this section. Every number in the first two tables comes from that run's `--json` output.
+
+| Item | Detail |
+| --- | --- |
+| Command | `claude plugin eval . --trust-plugin --scaffold --allow-tools Write Edit WebFetch --judge-model sonnet --threshold 0.8 --runs 3 --json evals/results.json --no-publish` |
+| Skill measured | The fix branch at commit `c93074c`, on top of `main` at `a2de738` |
+| Runs | 3 per case with the plugin (WITH) and 3 without it (W/OUT) |
+| Result | 6 of 6 cases at or above 0.8. Exit code 0 |
+| Run errors | None. All 36 runs finished |
+| Time and cost | 798 seconds and 2.81 US dollars, as the run reported them |
+
+| Case | WITH | W/OUT | Δ | At 0.8 |
+| --- | --- | --- | --- | --- |
+| `blend-two` | 1.00 | 0.00 | +1.00 | pass |
+| `declines-brand-copy` | 1.00 | 0.00 | +1.00 | pass |
+| `resume-from-files` | 1.00 | 0.00 | +1.00 | pass |
+| `routes-app-to-rea` | 1.00 | 0.00 | +1.00 | pass |
+| `scoreboard-made` | 1.00 | 0.00 | +1.00 | pass |
+| `study-a-page` | 0.89 | 0.00 | +0.89 | pass |
+
+The run reports an overall WITH score of 0.98 and a mean Δ of +0.98. No case failed, so there is no failure line.
+
+One grader result did fail. In `study-a-page`, the `criteria` grader failed 1 run of 3, on 3 votes to 0. That reply reports the study card written and stops at Stop 1. No cause is recorded.
+
+| Case | Rerun 2 WITH | Rerun 3 WITH | What changed |
+| --- | --- | --- | --- |
+| `blend-two` | 0.33 | 1.00 | Stop 1 shows the menu as it is in the file, Pick column kept. It does not pick or recommend parts |
+| `declines-brand-copy` | 0.67 | 1.00 | The no opens the reply and states rule 4. The skill description says it turns a copy request into an original |
+| `resume-from-files` | 1.00 | 1.00 | Nothing |
+| `routes-app-to-rea` | 0.67 | 1.00 | The guide loads before any example is opened. The app route asks about `rea` |
+| `scoreboard-made` | 0.00 | 1.00 | "run the check" loads the skill. Every row carries proof, and what was only read in code is ⚠️. The fixture gained its studies and blend |
+| `study-a-page` | 0.00 | 0.89 | One grader became three that each read what they judge. "Just go" covers the interview only |
+
+Read these before trusting 6 of 6.
+
+| Note | Detail |
+| --- | --- |
+| Not like for like | Rerun 2 used the default judge. Rerun 3 uses the larger judge, and `study-a-page` is graded by three graders, not one |
+| Two full runs | The first, at commit `898a8e5`, scored 1.00 in every case. Review then found that the grader split had narrowed one condition. It was restored and the suite run again. This section reports the second run. One full run of the 3 allowed was left unused |
+| Tuned on checks | The fixes were tuned before these runs on 213 skill-only runs in 25 checks, some on wording variants |
+| Soft spot | In the last check at this commit, `declines-brand-copy` passed 8 of 9 skill-only runs. The failing reply opened with the interview. A rerun can drop a run |
+| Baseline | W/OUT is 0.00 in every case with the larger judge. In Rerun 2 the default judge passed 2 of 3 no-skill replies in `declines-brand-copy` |
+| Study grader | The old grader read only the last reply and never saw the study card. A focus change alone did not fix it: the transcript passed 1 of 4 runs and the card file 0 of 4. The three-way split passed 4 of 4 |
+| A regression on the way | A reworded `checker` description stopped the skill loading for the brand-copy request. A six-run bisect found it, and the description is back to its old wording |
+| A prompt that invites a run-on | `study-a-page` says "just go with your own picks for the rest". One check run read that as leave to skip Stop 1, and built a site |
