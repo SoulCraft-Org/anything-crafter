@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" width="960" height="330" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title id="t">Anything Crafter in one picture</title>
+  <desc id="d">Three examples are studied into study cards, blended into a parts menu, turned into a blueprint, and crafted into your own result with a scoreboard.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Column titles -->
+  <g font-size="14" font-weight="600" fill="#94a3b8" text-anchor="middle">
+    <text x="85" y="26">🎯 Show</text>
+    <text x="270" y="26">🔬 Study</text>
+    <text x="455" y="26">🧩 Blend</text>
+    <text x="625" y="26">📐 Blueprint</text>
+    <text x="815" y="26">🔨 Craft + ✅ Check</text>
+  </g>
+
+  <!-- 1. Three examples -->
+  <g font-size="15" fill="#fff" text-anchor="middle">
+    <rect x="15" y="45" width="140" height="64" rx="10" fill="#475569"/>
+    <text x="85" y="72">Example 1</text>
+    <text x="85" y="94" font-size="12" opacity="0.85">a site, app or doc</text>
+    <rect x="15" y="133" width="140" height="64" rx="10" fill="#475569"/>
+    <text x="85" y="160">Example 2</text>
+    <text x="85" y="182" font-size="12" opacity="0.85">a repo or design</text>
+    <rect x="15" y="221" width="140" height="64" rx="10" fill="#475569"/>
+    <text x="85" y="248">Example 3</text>
+    <text x="85" y="270" font-size="12" opacity="0.85">anything you admire</text>
+  </g>
+
+  <!-- 2. Study cards -->
+  <g font-size="15" fill="#fff" text-anchor="middle">
+    <rect x="200" y="45" width="140" height="64" rx="10" fill="#2563eb"/>
+    <text x="270" y="72">Study card</text>
+    <text x="270" y="94" font-size="12">every part labelled</text>
+    <rect x="200" y="133" width="140" height="64" rx="10" fill="#2563eb"/>
+    <text x="270" y="160">Study card</text>
+    <text x="270" y="182" font-size="12">every part labelled</text>
+    <rect x="200" y="221" width="140" height="64" rx="10" fill="#2563eb"/>
+    <text x="270" y="248">Study card</text>
+    <text x="270" y="270" font-size="12">every part labelled</text>
+  </g>
+
+  <!-- 3. Parts menu -->
+  <g fill="#fff" text-anchor="middle">
+    <rect x="385" y="45" width="140" height="240" rx="12" fill="#7c3aed"/>
+    <text x="455" y="78" font-size="15" font-weight="600">Parts menu</text>
+    <g font-size="13">
+      <text x="455" y="112">☐ search bar</text>
+      <text x="455" y="140">☑ link grid</text>
+      <text x="455" y="168">☑ theme switch</text>
+      <text x="455" y="196">☐ login wall</text>
+      <text x="455" y="224">☑ clock</text>
+    </g>
+    <rect x="405" y="244" width="100" height="26" rx="13" fill="#c2410c"/>
+    <text x="455" y="262" font-size="13">✋ you pick</text>
+  </g>
+
+  <!-- 4. Blueprint -->
+  <g fill="#fff" text-anchor="middle">
+    <rect x="565" y="45" width="120" height="240" rx="12" fill="#0f766e"/>
+    <text x="625" y="78" font-size="15" font-weight="600">Blueprint</text>
+    <g font-size="13">
+      <text x="625" y="112">piece 1 ← V3</text>
+      <text x="625" y="140">piece 2 ← pick</text>
+      <text x="625" y="168">piece 3 ← V4</text>
+      <text x="625" y="196">piece 4 ← pick</text>
+    </g>
+    <text x="625" y="250" font-size="12" opacity="0.9">every piece traces</text>
+    <text x="625" y="268" font-size="12" opacity="0.9">to a reason</text>
+  </g>
+
+  <!-- 5. Yours + scoreboard -->
+  <g fill="#fff" text-anchor="middle">
+    <rect x="725" y="45" width="220" height="160" rx="14" fill="#15803d"/>
+    <text x="835" y="92" font-size="30">🛠️</text>
+    <text x="835" y="128" font-size="20" font-weight="700">Yours</text>
+    <text x="835" y="154" font-size="13">original, built from the blueprint</text>
+    <rect x="775" y="168" width="120" height="26" rx="13" fill="#166534" stroke="#bbf7d0" stroke-width="1.5"/>
+    <text x="835" y="186" font-size="13" font-weight="600">✅ 7 of 7</text>
+    <rect x="725" y="221" width="220" height="64" rx="10" fill="#475569"/>
+    <text x="835" y="248" font-size="15">Scoreboard</text>
+    <text x="835" y="270" font-size="12">✅ proven · ⚠️ unchecked · ❌ failed</text>
+    <rect x="775" y="284" width="120" height="24" rx="12" fill="#c2410c"/>
+    <text x="835" y="301" font-size="13">✋ you check</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#94a3b8" stroke-width="2.5" fill="none" marker-end="url(#a)">
+    <path d="M157 77 H196"/>
+    <path d="M157 165 H196"/>
+    <path d="M157 253 H196"/>
+    <path d="M342 77 L381 140"/>
+    <path d="M342 165 H381"/>
+    <path d="M342 253 L381 190"/>
+    <path d="M527 165 H561"/>
+    <path d="M687 125 H721"/>
+    <path d="M835 207 V217"/>
+  </g>
+</svg>
