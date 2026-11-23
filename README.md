@@ -61,6 +61,8 @@ flowchart LR
 | --- | --- | --- | --- | --- | --- |
 | 1 | [One-file start page](examples/first-craft/) | 2 | 103 lines, one file | ✅ 7 of 7 | ~7 minutes |
 
+![First craft: a one-file start page](examples/first-craft/screenshot.png)
+
 Every craft keeps its files. Open it, read the scoreboard, check the claim.
 
 ## 🧪 Model report card
@@ -68,10 +70,10 @@ Every craft keeps its files. Open it, read the scoreboard, check the claim.
 | Model | Harness | Show | Study | Blend | Blueprint | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
 | Claude Sonnet 5.5 | Claude Code | ✅ | ✅ | ✅ | ✅ | showcase #1 |
-| Nemotron 3.5 Super (open-weight) | OpenCode | ⏳ | ⏳ | ⏳ | ⏳ | ⏳ |
-| Nemotron 3.5 Lightning (open-weight) | OpenCode | ⏳ | ⏳ | ⏳ | ⏳ | ⏳ |
+| Nemotron 3.5 Super (open-weight) | OpenCode | ✅ | ✅ | ✅ | ✅ | 86 s |
+| Nemotron 3.5 Lightning (open-weight) | OpenCode | ✅ | ✅ | ✅ | ⚠️ | 46 s, after one fix |
 
-Tested, not claimed. ⏳ means not run yet.
+Tested, not claimed. Method and misses: [report card](examples/model-report-card.md).
 
 ## 📏 Small on purpose
 
