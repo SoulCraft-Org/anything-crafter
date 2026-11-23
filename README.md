@@ -32,7 +32,7 @@ flowchart LR
 | 50+ agents: OpenCode, Codex, Cursor, Goose, Hermes, OpenClaw, deepseek-harness, Qwen Code, Copilot | `npx skills add SoulCraft-Org/anything-crafter` |
 | Chat apps (claude.ai, Gemini app) | Upload `craft.zip` from Releases |
 | ChatGPT, anything else | Paste [`PASTE.md`](PASTE.md) |
-| Always-on, any AI | Paste [`rules.md`](skills/craft/references/rules.md) into `AGENTS.md` or `CLAUDE.md` |
+| Always-on, any AI | Paste [`rules.md`](plugins/anything-crafter/skills/craft/references/rules.md) into `AGENTS.md` or `CLAUDE.md` |
 
 ## 📜 The 5 rules
 
@@ -48,12 +48,12 @@ flowchart LR
 
 | Your example is | Guide | Studied with |
 | --- | --- | --- |
-| 🌐 A website | [website](skills/craft/guides/website.md) | Browser tool, else page fetch |
-| 🖥️ A web app | [web app](skills/craft/guides/web-app.md) | Browser tool, else page fetch |
-| 📦 Code: repo, CLI, package, plugin, skill | [code](skills/craft/guides/code.md) | `gh` and file reads |
-| 📄 A doc or deck | [doc and deck](skills/craft/guides/doc-deck.md) | File reads |
-| 🎨 A design | [design](skills/craft/guides/design.md) | File reads, Figma tool or vision |
-| 📱 An app or binary | [app and binary](skills/craft/guides/app-binary.md) | `rea`, added on your yes. Static look by default |
+| 🌐 A website | [website](plugins/anything-crafter/skills/craft/guides/website.md) | Browser tool, else page fetch |
+| 🖥️ A web app | [web app](plugins/anything-crafter/skills/craft/guides/web-app.md) | Browser tool, else page fetch |
+| 📦 Code: repo, CLI, package, plugin, skill | [code](plugins/anything-crafter/skills/craft/guides/code.md) | `gh` and file reads |
+| 📄 A doc or deck | [doc and deck](plugins/anything-crafter/skills/craft/guides/doc-deck.md) | File reads |
+| 🎨 A design | [design](plugins/anything-crafter/skills/craft/guides/design.md) | File reads, Figma tool or vision |
+| 📱 An app or binary | [app and binary](plugins/anything-crafter/skills/craft/guides/app-binary.md) | `rea`, added on your yes. Static look by default |
 
 ## 🏆 Showcase
 

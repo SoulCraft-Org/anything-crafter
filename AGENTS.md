@@ -4,7 +4,7 @@ Instructions for every coding agent in this repo. OpenCode, Codex and others rea
 
 | Topic | Rule |
 | --- | --- |
-| What this repo is | One portable Agent Skill (`skills/craft/`): show your AI examples, it learns how they are built, then builds your own |
+| What this repo is | One portable Agent Skill (`plugins/anything-crafter/skills/craft/`): show your AI examples, it learns how they are built, then builds your own |
 | Build and test | `python3 -I tools/voice_lint.py --rules tools/voice_rules.json <files>` on changed Markdown. CI runs it through Git Crafter's `ci-standard.yml` |
 | Budgets | Skill 100 lines, rules 90, README 150, repo under 1 MB. `tests/structure.test.mjs` enforces them in CI |
 | Shipping | Branch, commit with `git commit -s`, push the branch and open a pull request. Never push to `main` |

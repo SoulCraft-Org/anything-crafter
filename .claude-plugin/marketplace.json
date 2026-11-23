@@ -9,7 +9,7 @@
     {
       "name": "anything-crafter",
       "description": "Show your AI examples. It learns how they are built, then builds your own.",
-      "source": "./",
+      "source": "./plugins/anything-crafter",
       "author": {
         "name": "SoulCraft-Org"
       }

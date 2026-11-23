@@ -1,13 +1,7 @@
 {
   "name": "anything-crafter",
-  "description": "Show your AI examples. It learns how they are built, then builds your own. Six stages, five rules, any AI and any model.",
-  "icon": "./assets/icon.jpg",
-  "author": {
-    "name": "SoulCraft-Org",
-    "url": "https://github.com/SoulCraft-Org"
-  },
-  "homepage": "https://github.com/SoulCraft-Org/anything-crafter",
-  "repository": "https://github.com/SoulCraft-Org/anything-crafter",
+  "description": "Dev manifest for evals only: loads the plugin in plugins/anything-crafter so `claude plugin eval .` runs the root evals/ suite. Users install from the marketplace.",
   "license": "Apache-2.0",
-  "keywords": ["skills", "craft", "examples", "blueprint", "study", "build", "open-weight"]
+  "skills": "./plugins/anything-crafter/skills/",
+  "agents": ["./plugins/anything-crafter/agents/checker.md"]
 }
