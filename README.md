@@ -75,6 +75,8 @@ Every craft keeps its files. Open it, read the scoreboard, check the claim.
 
 Tested, not claimed. Method and misses: [report card](examples/model-report-card.md).
 
+Evals: 6 of 6 cases pass at 0.8, against 0 of 6 without the skill. One of 18 replies still failed. Read [the report](evals/REPORT.md#rerun-3).
+
 ## 📏 Small on purpose
 
 | Budget | Limit |
