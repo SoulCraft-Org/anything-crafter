@@ -1,6 +1,6 @@
 ---
 name: craft
-description: Builds your own version of anything from examples. Studies how they are built, then crafts and checks it. Use for "build me one like...", "make my own version of...", "study these", "run the check".
+description: Builds your own version of anything from examples. Studies how they are built, then crafts and checks it. Use for "build me one like...", "make my own version of...", "study these examples".
 ---
 
 # Craft
@@ -24,7 +24,7 @@ Load [rules](references/rules.md) once at the start. Rules win over everything b
 
 ## 1. Show
 
-First check rule 4. Asked to copy a name, logo, text, code or a lock? Start your reply with a one-line no to that part, then offer an original.
+First check rule 4. Asked to copy a name, logo, text, code or a lock? Start your reply with a one-line no that states the rule: learn the how, never copy the what. Then offer an original that uses the same patterns.
 Load [brief](references/brief.md) when you start.
 
 1. Ask the vision interview: 1 round, at most 5 questions, each with a recommended answer.
