@@ -23,7 +23,7 @@ flowchart LR
 [`build/index.html`](build/index.html): one file, 103 lines, no outside load. Open it in a browser.
 
 ## Scoreboard ([check](craft/check.md))
-✅ 5 · ⚠️ 2 · ❌ 0 of 7 promises. The 2 ⚠️ rows (search opens, system light and dark) need a real browser.
+✅ 7 · ⚠️ 0 · ❌ 0 of 7 promises. Search and system light and dark were checked in a real browser.
 
 ## Numbers
 | What | Count |
