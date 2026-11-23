@@ -8,6 +8,9 @@
   },
   "homepage": "https://github.com/SoulCraft-Org/anything-crafter",
   "repository": "https://github.com/SoulCraft-Org/anything-crafter",
+  "documentationUrl": "https://github.com/SoulCraft-Org/anything-crafter#readme",
+  "supportUrl": "https://github.com/SoulCraft-Org/anything-crafter/blob/main/SUPPORT.md",
+  "privacyPolicyUrl": "https://github.com/SoulCraft-Org/anything-crafter/blob/main/plugins/anything-crafter/PRIVACY.md",
   "license": "Apache-2.0",
   "keywords": ["skills", "craft", "examples", "blueprint", "study", "build", "open-weight"]
 }
