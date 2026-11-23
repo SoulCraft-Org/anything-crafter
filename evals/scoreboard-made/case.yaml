@@ -1,0 +1,5 @@
+# Stages the files this case's prompt describes. Runs only with `claude plugin eval --scaffold`.
+schema_version: "1.1"
+name: scoreboard-made
+context:
+  scaffold_script: fixture.sh
