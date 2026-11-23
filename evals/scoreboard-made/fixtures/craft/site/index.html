@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hammer Loft</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0 auto; max-width: 40rem; padding: 2rem; }
+    form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.5rem; }
+    input, button { font: inherit; padding: 0.5rem; }
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      form { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hammer Loft</h1>
+  <p>Borrow a tool from a neighbour. Sign up to join the street tool library.</p>
+  <form id="signup">
+    <input name="name" placeholder="Your name" required>
+    <input name="email" type="email" placeholder="Your email" required>
+    <button type="submit">Sign up</button>
+  </form>
+  <p id="note" role="status" hidden>Saved. See you at the loft.</p>
+  <script>
+    const form = document.getElementById("signup");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const saved = JSON.parse(localStorage.getItem("signups") || "[]");
+      saved.push({ name: form.elements.name.value, email: form.elements.email.value });
+      localStorage.setItem("signups", JSON.stringify(saved));
+      form.reset();
+      document.getElementById("note").hidden = false;
+    });
+  </script>
+</body>
+</html>
