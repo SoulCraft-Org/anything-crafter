@@ -1,0 +1,18 @@
+{
+  "name": "anything-crafter",
+  "description": "Marketplace for Anything Crafter: show examples, learn how they are built, craft your own.",
+  "owner": {
+    "name": "SoulCraft-Org",
+    "url": "https://github.com/SoulCraft-Org"
+  },
+  "plugins": [
+    {
+      "name": "anything-crafter",
+      "description": "Show your AI examples. It learns how they are built, then builds your own.",
+      "source": "./",
+      "author": {
+        "name": "SoulCraft-Org"
+      }
+    }
+  ]
+}
