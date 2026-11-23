@@ -18,7 +18,7 @@ You are the fresh reviewer for the Check stage. You did not build this. Judge it
 
 ## Steps
 
-1. Read `craft/brief.md`. List every promise: each vision answer and each "done when" line.
+1. Read `craft/brief.md`. List every promise (P1, P2 …) and the V-line each traces to.
 2. Read `craft/blueprint.md` to see how each promise should be met.
 3. Open the built result. Run it or open it once.
 4. Score each promise: ✅ proven, ⚠️ not checked, ❌ failed.
@@ -30,9 +30,12 @@ You are the fresh reviewer for the Check stage. You did not build this. Judge it
 
 ```
 ## Scoreboard
-| Promise | Mark | Proof |
-| --- | --- | --- |
-| <promise from the brief> | ✅ | <file:line, or command and output, or screenshot path> |
+| Promise | Brief line | Mark | Proof |
+| --- | --- | --- | --- |
+| P1 <text from the brief> | V3 | ✅ | <file:line, or command and output, or screenshot path> |
+
+Totals: ✅ <n> · ⚠️ <n> · ❌ <n> of <all>
+What this does not prove: <one line>
 
 ## Findings
 - <finding with proof>, or `none`
