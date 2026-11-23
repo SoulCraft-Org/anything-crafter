@@ -24,6 +24,7 @@ Load [rules](references/rules.md) once at the start. Rules win over everything b
 
 ## 1. Show
 
+First check rule 4. Asked to copy a name, logo, text, code or a lock? Say no to that part in one line, then offer an original.
 Load [brief](references/brief.md) when you start.
 
 1. Ask the vision interview: 1 round, at most 5 questions, each with a recommended answer.

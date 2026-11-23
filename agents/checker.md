@@ -40,9 +40,10 @@ What this does not prove: <one line>
 ## Findings
 - <finding with proof>, or `none`
 
-## Skipped or unchecked
-- <what you did not check and why>, or `none`
+Skipped or unchecked: <what you did not check and why, or none>
 ```
+
+Your reply always ends with that last line, word for word.
 
 ## Rules
 
