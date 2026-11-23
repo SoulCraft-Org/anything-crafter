@@ -1,0 +1,43 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <title>Anything Crafter</title>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="46%" r="72%">
+      <stop offset="0%" stop-color="#1B2150"/>
+      <stop offset="50%" stop-color="#161B3D"/>
+      <stop offset="100%" stop-color="#0B1026"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F6E2A0" stop-opacity="0.85"/>
+      <stop offset="40%" stop-color="#E8C25A" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#E8C25A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spark" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FBF1CE"/>
+      <stop offset="45%" stop-color="#E8C25A"/>
+      <stop offset="100%" stop-color="#C99A33"/>
+    </linearGradient>
+  </defs>
+
+  <!-- field -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- study lines: each example flows into the center -->
+  <g stroke="#8B6CE0" stroke-width="14" stroke-linecap="round" opacity="0.75">
+    <line x1="314" y1="314" x2="430" y2="430"/>
+    <line x1="710" y1="314" x2="594" y2="430"/>
+    <line x1="710" y1="710" x2="594" y2="594"/>
+    <line x1="314" y1="710" x2="430" y2="594"/>
+  </g>
+
+  <!-- examples: anything, as outlines -->
+  <g fill="none" stroke="#F5F3EC" stroke-width="22" stroke-linejoin="round" opacity="0.92">
+    <circle cx="252" cy="252" r="72"/>
+    <rect x="702" y="182" width="140" height="140" rx="18"/>
+    <path d="M772 698 L848 830 L696 830 Z"/>
+    <path d="M252 696 L328 772 L252 848 L176 772 Z"/>
+  </g>
+
+  <!-- yours: the crafted spark -->
+  <circle cx="512" cy="512" r="250" fill="url(#glow)"/>
+  <path fill="url(#spark)" d="M512 262 C528 444 580 496 762 512 C580 528 528 580 512 762 C496 580 444 528 262 512 C444 496 496 444 512 262 Z"/>
+</svg>

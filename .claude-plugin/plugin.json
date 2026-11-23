@@ -1,6 +1,7 @@
 {
   "name": "anything-crafter",
   "description": "Show your AI examples. It learns how they are built, then builds your own. Six stages, five rules, any AI and any model.",
+  "icon": "./assets/icon.jpg",
   "author": {
     "name": "SoulCraft-Org",
     "url": "https://github.com/SoulCraft-Org"
