@@ -1,6 +1,6 @@
 # Eval report
 
-Source: one `claude plugin eval` run on 2026-11-23, for [issue 6](https://github.com/SoulCraft-Org/anything-crafter/issues/6). Every number below comes from that run's `--json` output. The latest run is in [Rerun 3](#rerun-3).
+Source: one `claude plugin eval` run on 2026-11-23, for [issue 6](https://github.com/SoulCraft-Org/anything-crafter/issues/6). Every number below comes from that run's `--json` output. The latest run is in [Rerun 4](#rerun-4).
 
 | Item | Detail |
 | --- | --- |
@@ -142,3 +142,43 @@ Read these before trusting 6 of 6.
 | Averaging | The case score averages its three graders. So 0.89 is 2 of 3 runs passing every grader, and 1 run whose reply failed. A single grader would have scored that case 0.67, below 0.8 |
 | A regression on the way | A reworded `checker` description stopped the skill loading for the brand-copy request. A six-run bisect found it, and the description is back to its old wording |
 | A prompt that invites a run-on | `study-a-page` says "just go with your own picks for the rest". One check run read that as leave to skip Stop 1, and built a site |
+
+## Rerun 4
+
+Source: one `claude plugin eval` run on 2026-11-23, after [PR 27](https://github.com/SoulCraft-Org/anything-crafter/pull/27) moved the plugin into `plugins/anything-crafter/`. Every number in this section comes from that run's `--json` output. No case, skill or manifest text was changed for it.
+
+| Item | Detail |
+| --- | --- |
+| Command | `claude plugin eval . --trust-plugin --scaffold --allow-tools Write Edit WebFetch --judge-model sonnet --threshold 0.8 --runs 3 --json evals/results.json --no-publish` |
+| Skill measured | `main` at commit `a1e85c2`, loaded through the root dev manifest `.claude-plugin/plugin.json` |
+| CLI | Claude Code 2.1.330 |
+| Runs | 3 per case with the plugin (WITH) and 3 without it (W/OUT) |
+| Result | 5 of 6 cases at or above 0.8. Exit code 1 |
+| Run errors | None. All 36 runs finished |
+| Time and cost | 805 seconds and 2.79 US dollars, as the run reported them |
+| Skill fired | 18 of 18 WITH runs, 3 of 3 in every case. A separate one-prompt check loaded it as `anything-crafter:craft` |
+
+| Case | WITH | W/OUT | Δ | At 0.8 |
+| --- | --- | --- | --- | --- |
+| `blend-two` | 1.00 | 0.00 | +1.00 | pass |
+| `declines-brand-copy` | 1.00 | 0.00 | +1.00 | pass |
+| `resume-from-files` | 1.00 | 0.00 | +1.00 | pass |
+| `routes-app-to-rea` | 0.67 | 0.00 | +0.67 | fail |
+| `scoreboard-made` | 1.00 | 0.00 | +1.00 | pass |
+| `study-a-page` | 1.00 | 0.00 | +1.00 | pass |
+
+The run reports an overall WITH score of 0.94 and a mean Δ of +0.94.
+
+One line per case below 0.8. The judge returns votes with no reasons, so the cause is read from the reply.
+
+- `routes-app-to-rea`: 1 run of 3 failed on 3 votes to 0. The sandbox denied its read of `/Applications/Sketchpad.app`, so it stopped and offered three ways on, and never asked about `rea`.
+
+| Note | Detail |
+| --- | --- |
+| The move | The plugin loads from `plugins/anything-crafter/` through the root dev manifest. No fix was needed |
+| Like for like | Same command, judge and graders as Rerun 3 |
+| Against Rerun 3 | `routes-app-to-rea` fell from 1.00 to 0.67. `study-a-page` rose from 0.89 to 1.00. The others held at 1.00 |
+| The failure | Rerun 2 lost a run of this case the same way, at the unreadable app path. The skill text did not change between Rerun 3 and this run |
+| Averaging | Still applies to `study-a-page`, which averages its three graders. It hid nothing this time: all 3 graders passed all 3 runs. `routes-app-to-rea` has one scored grader, so its 0.67 is 2 of 3 runs |
+| Baseline | W/OUT is 0.00 in every case. In `study-a-page`, the `brief` and `card` graders threw because the no-skill runs wrote no `craft/` files |
+| Reruns | One, as asked |
