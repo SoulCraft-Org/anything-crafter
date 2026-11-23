@@ -10,8 +10,8 @@ Show examples. Learn how they are built. Build something original.
 | Rule | In short |
 | --- | --- |
 | Stages | 6, in order: Show, Study, Blend, Blueprint, Craft, Check |
-| Stops | Exactly 2: after Blend, and after Check |
-| Memory | Files in `craft/`. Each stage writes one file, so any session can resume |
+| Stops | Exactly 2: after Blend, and after Check. No one to answer: take the recommended option, mark it `unattended` in the file, go on |
+| Memory | Files in `craft/` in the project root. The blueprint names the build folder. Each stage writes one file, so any session can resume |
 | Last line | Every reply ends with `Skipped or unchecked: ...` (write `none` if nothing) |
 
 Load [rules](references/rules.md) once at the start. Rules win over everything below.
@@ -24,8 +24,7 @@ Load [rules](references/rules.md) once at the start. Rules win over everything b
 
 ## 1. Show
 
-Load [brief](references/brief.md) when you start. Pick the guide from the examples' type, then load it:
-[website](guides/website.md), [web app](guides/web-app.md), [code](guides/code.md), [doc or deck](guides/doc-deck.md), [design](guides/design.md), [app or binary](guides/app-binary.md). No guide fits: say so and say no. Never improvise one.
+Load [brief](references/brief.md) when you start.
 
 1. Ask the vision interview: 1 round, at most 5 questions, each with a recommended answer.
 2. Accept "just go" at any point and use the recommended answers.
@@ -38,10 +37,11 @@ Done when: every question is answered or defaulted, and 1 or more examples are n
 
 Load [study card](references/study-card.md) when you start.
 
-1. Study one example at a time with the guide's route: a browser tool if you have one, else fetch the page.
-2. Label every part of the example.
-3. Mark each claim Seen, Inferred or Unknown.
-4. Write `craft/studies/<example>.md`, one file per example.
+1. Pick the guide from the examples' type, then load it: [website](guides/website.md), [web app](guides/web-app.md), [code](guides/code.md), [doc or deck](guides/doc-deck.md), [design](guides/design.md), [app or binary](guides/app-binary.md). No guide fits: say so and say no. Never improvise one.
+2. Study one example at a time. Use the guide's route only.
+3. Label every part of the example.
+4. Mark each claim Seen, Inferred or Unknown.
+5. Write `craft/studies/<example>.md`, one file per example.
 
 Done when: every part is labelled and each example has 1 or more Seen proof.
 
@@ -71,15 +71,15 @@ Done when: every piece traces to the vision or a pick.
 
 1. Read `craft/brief.md` and `craft/blueprint.md` only. Do not reopen the examples.
 2. Build the thing, one blueprint piece at a time.
-3. Run it or open it once.
+3. Run it or open it once. If you cannot, run the smallest check you can and say which.
 
-Done when: it runs or opens. Say which.
+Done when: it runs, opens or passes a check. Say which.
 
 ## 6. Check
 
 Load [scoreboard](references/scoreboard.md) when you start.
 
-1. Use a fresh reviewer that reads only `craft/` and the result. No subagents: run this stage in a fresh session.
+1. Use a fresh reviewer that reads only `craft/` and the result. No subagents: use a fresh session. Neither: write `Reviewer: not fresh` and why.
 2. Score every promise in the brief: ✅ proven, ⚠️ not checked, ❌ failed. Give proof for each.
 3. Write `craft/check.md`.
 4. STOP 2: show the scoreboard. Wait.

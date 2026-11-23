@@ -23,6 +23,8 @@ A repo, command line tool, package, plugin or skill. You learn how it is laid ou
 
 Read the code. Do not install it, build it or run it.
 
+Big repo? Read the manifest, the licence, the entry points and at most about 20 files. Mark every part you did not read Unknown.
+
 ## What to record on the study card
 
 | Part | Write down |
