@@ -37,7 +37,7 @@ Studies read: <E1 file, E2 file, ...>
 
 ## Stop 1
 
-1. Show the whole menu in your reply, with the empty Pick column.
+1. Show the whole menu in your reply, with the empty Pick column. Name each file you wrote so far.
 2. Ask: "Which parts do you want? Give me numbers, or say all of the Seen ones."
 3. Wait. Do not design. Do not pick or recommend parts for the person: "Fits vision" is your advice.
 4. Write `yes` in the Pick column for each number given. Leave the others empty.

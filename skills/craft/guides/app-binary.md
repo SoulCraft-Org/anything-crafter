@@ -22,8 +22,8 @@ An installed app, an APK or a binary. You learn what it does, which files it hol
 | Deep study | Use the `rea` tool (MIT, github.com/morluto/rea, set up with `npx rea-agents setup`) |
 | Fallback | No `rea`, or no yes: stay with the static look and mark what you could not see Unknown |
 
-1. Say the route first: a static look now, and a deep study with `rea` only after a clear yes. Cannot read the app: say so, and ask for a copy or screenshots.
-2. Before adding `rea`, say what it installs and ask. Wait for a clear yes.
+1. Say the route first: a static look now. Cannot read the app: say so, and ask for a copy or screenshots.
+2. Ask if they also want the deep study with `rea`. Say what it installs. Wait for a clear yes before adding it.
 3. Before any runtime or hooking step, ask again, separately. The first yes never covers it.
 
 ## What to record on the study card

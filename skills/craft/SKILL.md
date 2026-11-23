@@ -1,6 +1,6 @@
 ---
 name: craft
-description: Builds your own version of anything from examples. Studies how they are built, then crafts and checks it. Use for "build me one like...", "copy this...", "study these...", "run the check".
+description: Builds your own version of anything from examples. Studies how they are built, then crafts and checks it. Use for "build me one like...", "make my own version of...", "study these", "run the check".
 ---
 
 # Craft
@@ -81,9 +81,9 @@ Done when: it runs, opens or passes a check. Say which.
 Load [scoreboard](references/scoreboard.md) when you start.
 
 1. Use a fresh reviewer that reads only `craft/` and the result: the `checker` agent if you have it. No subagents: use a fresh session. Neither: write `Reviewer: not fresh` and why.
-2. Score every promise in the brief: ✅ proven, ⚠️ not checked, ❌ failed. Give proof for each.
+2. Score every promise in the brief: ✅ proven, ⚠️ not checked, ❌ failed. Every row gets proof: a file and line, a command and its output, or a screenshot path.
 3. Write `craft/check.md`.
-4. STOP 2: show the scoreboard. Wait.
+4. STOP 2: show the scoreboard with its proof column. Wait.
 
 Done when: every promise has a mark and proof.
 
