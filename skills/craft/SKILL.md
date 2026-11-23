@@ -1,6 +1,6 @@
 ---
 name: craft
-description: Builds your own version of anything from examples. Studies how they are built, then crafts and checks it. Use for "build me one like...", "make my own version of...", "study these examples".
+description: Builds your own original version of anything from examples, and turns a request to copy one into an original. Use for "build me one like...", "make my own...", "study these", "run the check".
 ---
 
 # Craft
@@ -24,13 +24,13 @@ Load [rules](references/rules.md) once at the start. Rules win over everything b
 
 ## 1. Show
 
-First check rule 4. Asked to copy a name, logo, text, code or a lock? Start your reply with a one-line no that states the rule: learn the how, never copy the what. Then offer an original that uses the same patterns.
 Load [brief](references/brief.md) when you start.
 
-1. Ask the vision interview: 1 round, at most 5 questions, each with a recommended answer.
-2. Accept "just go" at any point and use the recommended answers. It covers the interview only, never the two stops.
-3. Ask for 1 or more examples (links, files or names).
-4. Write `craft/brief.md`: vision lines V1, V2 …, promises P1, P2 …. Never mark a promise: only Check does.
+1. Check rule 4 first. Asked to copy a name, logo, text, code or a lock? Start your reply with a one-line no that states the rule: learn the how, never copy the what. Then offer an original that uses the same patterns.
+2. Ask the vision interview: 1 round, at most 5 questions, each with a recommended answer.
+3. Accept "just go" at any point and use the recommended answers. It covers the interview only, never the two stops.
+4. Ask for 1 or more examples (links, files or names).
+5. Write `craft/brief.md`: vision lines V1, V2 …, promises P1, P2 …. Never mark a promise: only Check does.
 
 Done when: every question is answered or defaulted, and 1 or more examples are named.
 
