@@ -9,14 +9,14 @@ Start the next session here. Each row is one PR or one action.
 | Repo | Public. `v0.1.0` released with `craft.zip` |
 | Plugin | In `plugins/anything-crafter/` (#27). Icon (#26) and privacy policy (#28) set |
 | Anthropic plugin directory | Submitted. Scan passed on `a1e85c2`. Publish requested: it goes live when an Anthropic reviewer approves |
-| Evals | Rerun 3: 6 of 6. Rerun 4, after the folder move: 5 of 6, skill fired 18 of 18 (#29) |
+| Evals | Rerun 3: 6 of 6. Rerun 4, after the folder move: 5 of 6, skill fired 18 of 18 (#29, merged). Its `results.json` was not committed |
 | Security | Secret scanning, push protection, private reporting, CodeQL, fork PR approval on |
 
 ## Next steps
 
 | # | Task | Why | Done when |
 | --- | --- | --- | --- |
-| 1 | Merge #29 if not merged yet | Records Rerun 4 | `evals/REPORT.md` on `main` has Rerun 4 |
+| 1 | Done: #29 merged | Records Rerun 4 | `evals/REPORT.md` on `main` has Rerun 4 |
 | 2 | Answer the directory reviewer | Questions go to the contact email | The listing is live |
 | 3 | Once live, install from the directory. Then add that route to the README | Prove the new route | One install from the listing works |
 | 4 | Give `routes-app-to-rea` a fixture app path | The sandbox refused a read of a real app path in Rerun 2 and Rerun 4 | Case passes 3 of 3 in one cloud rerun |
