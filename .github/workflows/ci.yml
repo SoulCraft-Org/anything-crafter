@@ -23,3 +23,4 @@ jobs:
       short: |
         python3 -I tools/voice_lint.py --self-test
         git ls-files -z '*.md' | xargs -0 python3 -I tools/voice_lint.py --rules tools/voice_rules.json
+        node --test tests/*.test.mjs

@@ -1,0 +1,13 @@
+{
+  "name": "anything-crafter",
+  "displayName": "Anything Crafter",
+  "description": "Show your AI examples. It learns how they are built, then builds your own.",
+  "author": {
+    "name": "SoulCraft-Org"
+  },
+  "homepage": "https://github.com/SoulCraft-Org/anything-crafter",
+  "repository": "https://github.com/SoulCraft-Org/anything-crafter",
+  "license": "Apache-2.0",
+  "keywords": ["skills", "craft", "examples", "blueprint", "study", "build", "open-weight"],
+  "skills": "./skills/"
+}

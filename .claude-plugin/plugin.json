@@ -1,0 +1,12 @@
+{
+  "name": "anything-crafter",
+  "description": "Show your AI examples. It learns how they are built, then builds your own. Six stages, five rules, any AI and any model.",
+  "author": {
+    "name": "SoulCraft-Org",
+    "url": "https://github.com/SoulCraft-Org"
+  },
+  "homepage": "https://github.com/SoulCraft-Org/anything-crafter",
+  "repository": "https://github.com/SoulCraft-Org/anything-crafter",
+  "license": "Apache-2.0",
+  "keywords": ["skills", "craft", "examples", "blueprint", "study", "build", "open-weight"]
+}
