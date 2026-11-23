@@ -9,5 +9,5 @@
   "repository": "https://github.com/SoulCraft-Org/anything-crafter",
   "license": "Apache-2.0",
   "keywords": ["skills", "craft", "examples", "blueprint", "study", "build", "open-weight"],
-  "skills": "./skills/"
+  "skills": "./plugins/anything-crafter/skills/"
 }

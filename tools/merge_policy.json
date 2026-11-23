@@ -60,8 +60,7 @@
     "**/conftest.py",
     "**/*.svg",
     "**/.claude/**",
-    "skills/**",
-    "agents/**",
+    "plugins/**",
     ".claude-plugin/**",
     ".codex-plugin/**",
     ".cursor-plugin/**",
@@ -85,16 +84,16 @@
         ".github/workflows/ci.yml"
       ],
       [
-        "skills/craft/SKILL.md"
+        "plugins/anything-crafter/skills/craft/SKILL.md"
       ],
       [
-        "skills/craft/guides/web-app.md"
+        "plugins/anything-crafter/skills/craft/guides/web-app.md"
       ],
       [
-        "agents/checker.md"
+        "plugins/anything-crafter/agents/checker.md"
       ],
       [
-        ".claude-plugin/plugin.json"
+        "plugins/anything-crafter/.claude-plugin/plugin.json"
       ],
       [
         ".codex-plugin/plugin.json"
@@ -113,7 +112,7 @@
       ],
       [
         "examples/second-craft/README.md",
-        "skills/craft/SKILL.md"
+        "plugins/anything-crafter/skills/craft/SKILL.md"
       ],
       [
         "evals/study-a-page/prompt.md"

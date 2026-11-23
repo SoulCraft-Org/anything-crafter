@@ -17,6 +17,8 @@ claude plugin eval . --trust-plugin --scaffold --allow-tools Write Edit WebFetch
 
 Costs plan usage or API credit: the first run took 767 s and 2.27 US dollars. Run it in a cloud session, never on a small laptop.
 
+The plugin lives in `plugins/anything-crafter/`, which the plugin directory takes without scripts. The evals stay here, so the root `.claude-plugin/plugin.json` is a dev manifest: it loads the plugin's skills and agent for `claude plugin eval .`. Users install from the marketplace, which never reads it.
+
 ## Cases
 
 | Case | Checks |
