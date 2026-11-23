@@ -5,13 +5,14 @@ Each case runs 3 times with the skill and 3 times without it, then compares.
 ## Run
 
 ```bash
-claude plugin eval . --trust-plugin --scaffold --allow-tools Write Edit WebFetch --threshold 0.8 --runs 3 --json evals/results.json --no-publish
+claude plugin eval . --trust-plugin --scaffold --allow-tools Write Edit WebFetch --judge-model sonnet --threshold 0.8 --runs 3 --json evals/results.json --no-publish
 ```
 
 | Flag | Why |
 | --- | --- |
 | `--scaffold` | Copies each case's `fixtures/` into its run folder |
 | `--allow-tools Write Edit WebFetch` | Without it the eval removes these tools, and the craft cannot fetch a page or write its files |
+| `--judge-model sonnet` | The default judge split its votes on replies that were alike. See Rerun 2 in the report |
 | `--threshold 0.8` | A case passes at 0.8 or higher |
 
 Costs plan usage or API credit: the first run took 767 s and 2.27 US dollars. Run it in a cloud session, never on a small laptop.

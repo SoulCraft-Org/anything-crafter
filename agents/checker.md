@@ -1,6 +1,6 @@
 ---
 name: checker
-description: Fresh-eyes reviewer for the Check stage of a craft. Use after the build runs, to score every promise in craft/brief.md as proven, not checked or failed, with proof, and to flag copied example text.
+description: Fresh-eyes reviewer that the craft skill starts in its Check stage. Asked to check a craft? Load the craft skill first and let it call this agent. Scores every promise in craft/brief.md with proof.
 model: inherit
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: craft
-description: Builds your own version of anything from examples. Studies how they are built, then crafts and checks it. Use for "build me one like...", "make my own version of...", "study these examples".
+description: Builds your own version of anything from examples. Studies how they are built, then crafts and checks it. Use for "build me one like...", "copy this...", "study these...", "run the check".
 ---
 
 # Craft
@@ -10,7 +10,7 @@ Show examples. Learn how they are built. Build something original.
 | Rule | In short |
 | --- | --- |
 | Stages | 6, in order: Show, Study, Blend, Blueprint, Craft, Check |
-| Stops | Exactly 2: after Blend, and after Check. No one to answer: take the recommended option, mark it `unattended` in the file, go on |
+| Stops | Exactly 2: after Blend, and after Check. Stop and wait. Only if the person said to work unattended: take the recommended option, mark it `unattended` in the file, go on |
 | Memory | Files in `craft/` in the project root. The blueprint names the build folder. Each stage writes one file, so any session can resume |
 | Last line | Every reply ends with `Skipped or unchecked: ...` (write `none` if nothing) |
 
@@ -24,7 +24,7 @@ Load [rules](references/rules.md) once at the start. Rules win over everything b
 
 ## 1. Show
 
-First check rule 4. Asked to copy a name, logo, text, code or a lock? Say no to that part in one line, then offer an original.
+First check rule 4. Asked to copy a name, logo, text, code or a lock? Start your reply with a one-line no to that part, then offer an original.
 Load [brief](references/brief.md) when you start.
 
 1. Ask the vision interview: 1 round, at most 5 questions, each with a recommended answer.
@@ -38,7 +38,7 @@ Done when: every question is answered or defaulted, and 1 or more examples are n
 
 Load [study card](references/study-card.md) when you start.
 
-1. Pick the guide from the examples' type, then load it: [website](guides/website.md), [web app](guides/web-app.md), [code](guides/code.md), [doc or deck](guides/doc-deck.md), [design](guides/design.md), [app or binary](guides/app-binary.md). No guide fits: say so and say no. Never improvise one.
+1. Pick the guide from the examples' type and load it before you open any example: [website](guides/website.md), [web app](guides/web-app.md), [code](guides/code.md), [doc or deck](guides/doc-deck.md), [design](guides/design.md), [app or binary](guides/app-binary.md). No guide fits: say so and say no. Never improvise one.
 2. Study one example at a time. Use the guide's route only.
 3. Label every part of the example.
 4. Mark each claim Seen, Inferred or Unknown.
@@ -55,7 +55,7 @@ Load [parts menu](references/parts-menu.md) when you start.
 3. Write `craft/blend.md`.
 4. STOP 1: ask the person to pick parts. Wait.
 
-Done when: the picks are in `craft/blend.md`, marked `unattended` if nobody answered.
+Done when: the picks are in `craft/blend.md`, marked `unattended` on an unattended run.
 
 ## 4. Blueprint
 
@@ -80,7 +80,7 @@ Done when: it runs, opens or passes a check. Say which.
 
 Load [scoreboard](references/scoreboard.md) when you start.
 
-1. Use a fresh reviewer that reads only `craft/` and the result. No subagents: use a fresh session. Neither: write `Reviewer: not fresh` and why.
+1. Use a fresh reviewer that reads only `craft/` and the result: the `checker` agent if you have it. No subagents: use a fresh session. Neither: write `Reviewer: not fresh` and why.
 2. Score every promise in the brief: ✅ proven, ⚠️ not checked, ❌ failed. Give proof for each.
 3. Write `craft/check.md`.
 4. STOP 2: show the scoreboard. Wait.
