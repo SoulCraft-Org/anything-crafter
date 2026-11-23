@@ -4,6 +4,8 @@ Vision first. Examples second. One round, at most 5 questions.
 
 ## 1. Ask the vision interview
 
+First, rule 4: asked to copy a name, logo, text, code or a lock? Open your reply with the one-line no and the offer of an original. Then ask.
+
 Say: "Answer, say yes to take my pick, or say just go."
 
 | # | Ask | Recommended answer |

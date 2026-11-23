@@ -1,6 +1,6 @@
 # Study card
 
-One card per example. Write it to `craft/studies/<example>.md`. Name the file after the example, lower case, with dashes.
+One card per example. Write it to `craft/studies/<example>.md`. Name the file after the example, lower case, with dashes. A link becomes its host with dashes: example.com gives `example-com.md`.
 
 ## Fill in this card
 
