@@ -20,14 +20,18 @@ flowchart LR
 ```
 
 ## Result
-Build and scoreboard come in the next pull request: `build/index.html` and `craft/check.md`.
+[`build/index.html`](build/index.html): one file, 103 lines, no outside load. Open it in a browser.
+
+## Scoreboard ([check](craft/check.md))
+✅ 5 · ⚠️ 2 · ❌ 0 of 7 promises. The 2 ⚠️ rows (search opens, system light and dark) need a real browser.
 
 ## Numbers
 | What | Count |
 | --- | --- |
 | Examples studied | 2 (flame, MIT, 6683 stars; dashy, MIT, 27055 stars) |
-| Craft files so far | 5 |
-| Result, scoreboard, time taken | next pull request |
+| Files | 6 craft files, 1 result file |
+| Lines | 103 in the result, 208 in the craft files |
+| Time taken | about 7 minutes, all 6 stages, one session |
 
 ## What this does not prove
-One run, one maker, one small thing. It does not show the skill works for apps, designs or other models.
+One run, one maker, one small thing. The check was made by the builder, not a fresh reviewer, and no browser opened the page. It does not show the skill works for apps, designs or other models.
