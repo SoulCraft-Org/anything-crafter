@@ -1,0 +1,7 @@
+__pycache__/
+.DS_Store
+node_modules/
+# A craft run writes here; keep a user's working files out of this repo.
+/craft/
+# A built release asset.
+dist/
