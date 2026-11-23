@@ -28,7 +28,7 @@ First check rule 4. Asked to copy a name, logo, text, code or a lock? Start your
 Load [brief](references/brief.md) when you start.
 
 1. Ask the vision interview: 1 round, at most 5 questions, each with a recommended answer.
-2. Accept "just go" at any point and use the recommended answers.
+2. Accept "just go" at any point and use the recommended answers. It covers the interview only, never the two stops.
 3. Ask for 1 or more examples (links, files or names).
 4. Write `craft/brief.md`: vision lines V1, V2 …, promises P1, P2 …. Never mark a promise: only Check does.
 
@@ -81,7 +81,7 @@ Done when: it runs, opens or passes a check. Say which.
 Load [scoreboard](references/scoreboard.md) when you start.
 
 1. Use a fresh reviewer that reads only `craft/` and the result: the `checker` agent if you have it. No subagents: use a fresh session. Neither: write `Reviewer: not fresh` and why.
-2. Score every promise in the brief: ✅ proven, ⚠️ not checked, ❌ failed. Every row gets proof: a file and line, a command and its output, or a screenshot path.
+2. Score every promise in the brief: ✅ proven, ⚠️ not checked, ❌ failed. Every row gets proof: a file and line, a command and its output, or a screenshot path. Behaviour or layout you only read in code is ⚠️.
 3. Write `craft/check.md`.
 4. STOP 2: show the scoreboard with its proof column. Wait.
 
@@ -95,3 +95,4 @@ Done when: every promise has a mark and proof.
 | Do the stages in order | Skip a stage to save time |
 | Say what you could not check | Claim done before Check ran |
 | Keep names, text, art and code of examples out | Copy an example's words or assets |
+| Open with the one-line no when asked to copy | Start the interview before the no |
