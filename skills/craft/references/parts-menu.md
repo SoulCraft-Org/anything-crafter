@@ -1,3 +1,47 @@
 # Parts menu
 
-Filled in step 3.
+Write it to `craft/blend.md`. Read every file in `craft/studies/` first. No design yet.
+
+## Fill in this menu
+
+```
+# Blend
+Studies read: <E1 file, E2 file, ...>
+
+## What I learned
+- <one line a person can check against a study card>
+- <one line>
+- <one line>
+
+## Parts
+| # | Part | From | What it does | Label | Pick |
+| --- | --- | --- | --- | --- | --- |
+| 1 | <part> | E1 | <one line> | Seen | |
+| 2 | <part> | E2 | <one line> | Inferred | |
+
+## Overlaps and gaps
+- Both do: <part both examples have>
+- Only one has: <part>
+- Neither has, but the brief wants: <V-line, no part yet>
+```
+
+## Steps
+
+1. Write 3 to 6 "What I learned" lines first. State them before any design.
+2. Put every part from every card in one table. One row per part.
+3. Merge a part that two examples share into one row. Write both in "From".
+4. Copy each part's label from its card. Never upgrade one.
+5. Leave the Pick column empty.
+6. Where a part serves a V-line in the brief, add the V-number to "What it does".
+
+## Stop 1
+
+1. Ask: "Which parts do you want? Give me numbers, or say all of the Seen ones."
+2. Wait. Do not design. Do not pick for the person.
+3. Write `yes` in the Pick column for each number given. Leave the others empty.
+4. End the reply with "Skipped or unchecked: ...".
+
+| Do | Don't |
+| --- | --- |
+| Show part names and one-line reasons | Show code, text or art from an example |
+| Name the V-line gaps no part fills | Fill a gap with a guess |
