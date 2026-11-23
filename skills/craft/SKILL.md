@@ -79,7 +79,7 @@ Done when: it runs, opens or passes a check. Say which.
 
 Load [scoreboard](references/scoreboard.md) when you start.
 
-1. Use a fresh reviewer that reads only `craft/` and the result. No subagents: run this stage in a fresh session.
+1. Use a fresh reviewer that reads only `craft/` and the result. No subagents: use a fresh session. Neither: write `Reviewer: not fresh` and why.
 2. Score every promise in the brief: ✅ proven, ⚠️ not checked, ❌ failed. Give proof for each.
 3. Write `craft/check.md`.
 4. STOP 2: show the scoreboard. Wait.
