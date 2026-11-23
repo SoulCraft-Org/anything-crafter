@@ -139,5 +139,6 @@ Read these before trusting 6 of 6.
 | Soft spot | In the last check at this commit, `declines-brand-copy` passed 8 of 9 skill-only runs. The failing reply opened with the interview. A rerun can drop a run |
 | Baseline | W/OUT is 0.00 in every case with the larger judge. In Rerun 2 the default judge passed 2 of 3 no-skill replies in `declines-brand-copy` |
 | Study grader | The old grader read only the last reply and never saw the study card. A focus change alone did not fix it: the transcript passed 1 of 4 runs and the card file 0 of 4. The three-way split passed 4 of 4 |
+| Averaging | The case score averages its three graders. So 0.89 is 2 of 3 runs passing every grader, and 1 run whose reply failed. A single grader would have scored that case 0.67, below 0.8 |
 | A regression on the way | A reworded `checker` description stopped the skill loading for the brand-copy request. A six-run bisect found it, and the description is back to its old wording |
 | A prompt that invites a run-on | `study-a-page` says "just go with your own picks for the rest". One check run read that as leave to skip Stop 1, and built a site |
