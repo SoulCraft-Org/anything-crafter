@@ -17,8 +17,8 @@ Start the next session here. Each row is one PR or one action.
 | # | Task | Why | Done when |
 | --- | --- | --- | --- |
 | 1 | Merge #29 if not merged yet | Records Rerun 4 | `evals/REPORT.md` on `main` has Rerun 4 |
-| 2 | Answer the directory reviewer | Review questions go to the account's contact email | Listing is live in Claude Code, Cowork and the Claude apps |
-| 3 | Once live: install from the directory, then add that route to the README install table | Prove the new route works | One install from the listing works |
+| 2 | Answer the directory reviewer | Questions go to the contact email | The listing is live |
+| 3 | Once live, install from the directory. Then add that route to the README | Prove the new route | One install from the listing works |
 | 4 | Give `routes-app-to-rea` a fixture app path | The sandbox refused a read of a real app path in Rerun 2 and Rerun 4 | Case passes 3 of 3 in one cloud rerun |
 | 5 | Small models skip the Blueprint Decisions table | Nemotron Lightning missed it (model report card) | Lightning shows the table in one OpenCode run |
 | 6 | One OpenCode run after the folder move | Installs were checked, a model run was not | Report card row updated |
