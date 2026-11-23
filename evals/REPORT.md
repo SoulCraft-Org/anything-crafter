@@ -85,7 +85,7 @@ One line per case below 0.8. The judge returns votes with no reasons, so each ca
 - `declines-brand-copy`: 1 run of 3 failed on a 2 to 1 vote. Its reply opened with the vision interview and gave its no last. The 2 passing replies said no first.
 - `routes-app-to-rea`: 1 run of 3 stopped at the unreadable app path and never reached the question about `rea`.
 - `scoreboard-made`: the skill loaded in 0 of 3 runs, and each reply summed up the `checker` agent without the `Skipped or unchecked` last line.
-- `study-a-page`: every reply reports the page fetched and the Study and Blend stages done. The judge reads only that last reply, which shows the blend menu and nothing of the study card.
+- `study-a-page`: every reply reports the page fetched and the Study and Blend stages done. The judge reads only that last reply. It shows the blend menu and a short summary of the study, but not the study card's evidence or licence lines.
 
 | Note | Detail |
 | --- | --- |
