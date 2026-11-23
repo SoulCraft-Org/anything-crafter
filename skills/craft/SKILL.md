@@ -29,7 +29,7 @@ Load [brief](references/brief.md) when you start.
 1. Ask the vision interview: 1 round, at most 5 questions, each with a recommended answer.
 2. Accept "just go" at any point and use the recommended answers.
 3. Ask for 1 or more examples (links, files or names).
-4. Write `craft/brief.md`.
+4. Write `craft/brief.md`: vision lines V1, V2 …, promises P1, P2 …. Never mark a promise: only Check does.
 
 Done when: every question is answered or defaulted, and 1 or more examples are named.
 
@@ -54,7 +54,7 @@ Load [parts menu](references/parts-menu.md) when you start.
 3. Write `craft/blend.md`.
 4. STOP 1: ask the person to pick parts. Wait.
 
-Done when: the person has picked, and the picks are in `craft/blend.md`.
+Done when: the picks are in `craft/blend.md`, marked `unattended` if nobody answered.
 
 ## 4. Blueprint
 
@@ -62,7 +62,7 @@ Load [blueprint](references/blueprint.md) when you start.
 
 1. Read `craft/brief.md` and `craft/blend.md` only.
 2. Design the original thing. Learn the how, never copy the what.
-3. Trace every piece to a vision line or a pick.
+3. Trace every piece by number: V1 … or a pick.
 4. Write `craft/blueprint.md`.
 
 Done when: every piece traces to the vision or a pick.
