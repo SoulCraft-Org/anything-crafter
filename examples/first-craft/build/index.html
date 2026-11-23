@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<title>Start</title>
+<style>
+  :root {
+    color-scheme: light dark; /* follows the system until you press the button */
+    --bg: light-dark(#f6f4ef, #16181d);
+    --fg: light-dark(#1f2328, #e6e8ec);
+    --tile: light-dark(#ffffff, #23262d);
+    --accent: light-dark(#1f6f5c, #6fd3b8);
+  }
+  :root[data-theme="light"] { color-scheme: light; }
+  :root[data-theme="dark"] { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; padding: 16px;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.5 system-ui, sans-serif;
+    display: flex; align-items: center; flex-direction: column; gap: 24px;
+  }
+  header { width: 100%; max-width: 720px; display: flex; justify-content: space-between; align-items: center; margin-top: 8vh; }
+  #clock { font-size: 2.5rem; font-variant-numeric: tabular-nums; }
+  #date { margin: 0; opacity: 0.7; }
+  button, input { font: inherit; color: inherit; }
+  button { background: var(--tile); border: 1px solid var(--accent); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+  form { width: 100%; max-width: 720px; }
+  input { width: 100%; padding: 12px 16px; background: var(--tile); border: 2px solid transparent; border-radius: 12px; }
+  input:focus, button:focus-visible, a:focus-visible { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+  #grid { width: 100%; max-width: 720px; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+  #grid a { padding: 18px 12px; text-align: center; text-decoration: none; color: inherit; background: var(--tile); border-radius: 12px; border-bottom: 3px solid var(--accent); }
+  #grid a:hover { transform: translateY(-2px); }
+</style>
+</head>
+<body>
+<header>
+  <div><div id="clock"></div><p id="date"></p></div>
+  <button id="theme" type="button" aria-label="Switch between light and dark">Light / dark</button>
+</header>
+<form action="https://duckduckgo.com/" method="get">
+  <input name="q" type="search" placeholder="Search the web  (press / to jump here)" aria-label="Search the web" autocomplete="off" autofocus>
+</form>
+<nav id="grid" aria-label="Favourite links"><noscript>Turn on JavaScript to see your links.</noscript></nav>
+<script>
+  // Edit this list: [name, address]. Nothing else needs to change.
+  const LINKS = [
+    ["Wikipedia", "https://en.wikipedia.org"],
+    ["Maps", "https://www.openstreetmap.org"],
+    ["Web archive", "https://archive.org"],
+    ["Hacker News", "https://news.ycombinator.com"],
+    ["Web docs", "https://developer.mozilla.org"],
+    ["Free books", "https://www.gutenberg.org"],
+  ];
+
+  const root = document.documentElement;
+  const box = document.querySelector("input");
+  const store = {
+    get() { try { return localStorage.getItem("theme"); } catch (e) { return null; } },
+    set(v) { try { localStorage.setItem("theme", v); } catch (e) { /* private mode: skip saving */ } },
+  };
+
+  // Link grid: one tile per list entry.
+  const grid = document.getElementById("grid");
+  for (const [name, url] of LINKS) {
+    const a = document.createElement("a");
+    a.href = url;
+    a.rel = "noopener";
+    a.textContent = name;
+    grid.append(a);
+  }
+
+  // Clock: redraw every second in the browser's own format.
+  const tick = () => {
+    const moment = new Date();
+    document.getElementById("clock").textContent = moment.toLocaleTimeString();
+    document.getElementById("date").textContent = moment.toLocaleDateString(undefined, { dateStyle: "full" });
+  };
+  tick();
+  setInterval(tick, 1000);
+
+  // Theme: system first, then the saved choice, then the button.
+  const saved = store.get();
+  if (saved === "light" || saved === "dark") root.dataset.theme = saved;
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme
+      ? root.dataset.theme === "dark"
+      : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    store.set(root.dataset.theme);
+  });
+
+  // Keys: "/" jumps to the search box, Esc clears it.
+  addEventListener("keydown", (e) => {
+    if (e.key === "/" && document.activeElement !== box) { e.preventDefault(); box.focus(); }
+    else if (e.key === "Escape") { box.value = ""; box.blur(); }
+  });
+</script>
+</body>
+</html>
