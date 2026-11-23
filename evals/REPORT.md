@@ -1,10 +1,11 @@
 # Eval report
 
-Source: one `claude plugin eval` run on 2026-11-23, for [issue 6](https://github.com/SoulCraft-Org/anything-crafter/issues/6). Every number below comes from that run's `--json` output.
+Source: one `claude plugin eval` run on 2026-11-23, for [issue 6](https://github.com/SoulCraft-Org/anything-crafter/issues/6). Every number below comes from that run's `--json` output. The latest run is in [Rerun 2](#rerun-2).
 
 | Item | Detail |
 | --- | --- |
 | Command | `claude plugin eval . --trust-plugin --threshold 0.8 --runs 3 --json evals/results.json --no-publish --scaffold` |
+| Skill measured | Commit `02816b1`. `main` moved on while this run was going |
 | CLI | Claude Code 2.1.330 |
 | Runs | 3 per case with the plugin (WITH) and 3 without it (W/OUT) |
 | Result | 2 of 6 cases at or above 0.8. Exit code 1 |
@@ -53,3 +54,42 @@ The first run used the same command without `--scaffold`. It passed 1 of 6 cases
 | Tools not granted | The command passes no `--allow-tools`, so `Write`, `WebFetch` and `Bash` are removed from every run |
 | Noise | `declines-brand-copy` and `routes-app-to-rea` did not change between the two runs. Each still moved by 0.67. Three runs per case is a small sample |
 | Reruns | One, as planned. No case was tuned after it |
+
+## Rerun 2
+
+Source: one more `claude plugin eval` run on 2026-11-23, on the latest `main`. Every number in this section comes from that run's `--json` output.
+
+| Item | Detail |
+| --- | --- |
+| Command | `claude plugin eval . --trust-plugin --scaffold --allow-tools Write Edit WebFetch --threshold 0.8 --runs 3 --json evals/results.json --no-publish` |
+| Skill measured | `main` at commit `7b52bff` |
+| Runs | 3 per case with the plugin (WITH) and 3 without it (W/OUT) |
+| Result | 1 of 6 cases at or above 0.8. Exit code 1 |
+| Run errors | None. All 36 runs finished |
+| Time and cost | 782 seconds and 2.26 US dollars, as the run reported them |
+
+| Case | WITH | W/OUT | Δ | At 0.8 |
+| --- | --- | --- | --- | --- |
+| `blend-two` | 0.33 | 0.00 | +0.33 | fail |
+| `declines-brand-copy` | 0.67 | 0.67 | 0.00 | fail |
+| `resume-from-files` | 1.00 | 0.00 | +1.00 | pass |
+| `routes-app-to-rea` | 0.67 | 0.00 | +0.67 | fail |
+| `scoreboard-made` | 0.00 | 0.00 | 0.00 | fail |
+| `study-a-page` | 0.00 | 0.00 | 0.00 | fail |
+
+The run reports an overall WITH score of 0.44 and a mean Δ of +0.33.
+
+One line per case below 0.8. The judge returns votes with no reasons, so each cause is read from the replies.
+
+- `blend-two`: all 3 runs wrote `craft/blend.md` and stopped to ask, but no reply showed the pick column, and the judge split 5 votes to 4.
+- `declines-brand-copy`: 1 run of 3 still opened the vision interview and left its no to the end, so the judge failed it 2 votes to 1.
+- `routes-app-to-rea`: 1 run of 3 stopped at the unreadable app path and never reached the question about `rea`.
+- `scoreboard-made`: the skill loaded in 0 of 3 runs, and each reply summed up the `checker` agent without the `Skipped or unchecked` last line.
+- `study-a-page`: every run fetched the page and wrote the brief, the study card and the blend, but the judge reads only the last reply, which is the blend menu.
+
+| Note | Detail |
+| --- | --- |
+| Not like for like | The tables above this section measured commit `02816b1` with no tools granted. Rerun 2 measures commit `7b52bff` with `Write`, `Edit` and `WebFetch` granted |
+| What a pass takes | 3 of 3 runs. Two cases scored 0.67, which is 1 failed run each |
+| Skill fired | 3 of 3 runs in 4 cases, 2 of 3 in `declines-brand-copy`, 0 of 3 in `scoreboard-made` |
+| Reruns | One, as asked. No case or skill text was changed for it |
