@@ -90,6 +90,7 @@ Done when: every promise has a mark and proof.
 
 | Do | Don't |
 | --- | --- |
-| Do one stage per turn, then name the next | Skip a stage to save time |
+| Finish a stage, write its file, then start the next | Stop anywhere except the 2 stops |
+| Do the stages in order | Skip a stage to save time |
 | Say what you could not check | Claim done before Check ran |
 | Keep names, text, art and code of examples out | Copy an example's words or assets |
